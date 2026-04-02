@@ -20,6 +20,8 @@ const TodoListComponent: React.FC<Props> = ({ todos }) => {
   const handleSelect = (todo: Todo) => {
     if (currentTodo?.id === todo.id) {
       dispatch(actions.clear());
+
+      return;
     }
 
     dispatch(actions.set(todo));
