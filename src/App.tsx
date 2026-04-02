@@ -32,7 +32,7 @@ export const App = () => {
             <div className="block">
               {loading && <Loader />}
               {error && <p>{error}</p>}
-              {todos.length === 0 && <p>No data</p>}
+              {todos.length === 0 && !loading && !error && <p>No data</p>}
               {todos.length > 0 && <TodoList todos={todos} />}
             </div>
           </div>

@@ -14,6 +14,9 @@ const TodoModalComponent: React.FC = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+    setUser(null);
+    setErrorMessage('');
+
     if (!currentTodo) {
       return;
     }
